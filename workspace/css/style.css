@@ -1,0 +1,7 @@
+p.blue {
+  color: blue;
+}
+
+p.blue.dark {
+  color: darkblue;
+}

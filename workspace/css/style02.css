@@ -1,0 +1,44 @@
+#class-title {
+  color:blue;
+}
+
+#id-title {
+  color:black;
+}
+
+#union-title {
+  color:purple;
+}
+
+.one.two {
+  /* 밑줄긋기 */
+  text-decoration: underline;
+}
+
+/* 자식 결합자 */
+#self-discription > li#self-discription-hobby > ul{
+  color:brown ;
+}
+
+/* 뒤따르는 모든 동생 결합자 */
+ol > .starter ~ li{
+  font:bold;
+  color: aqua;
+}
+
+/* 뒤따르는 바로 아래 동생 결합자 */
+ol > .starter + li {
+  font-style: italic;
+  color:tomato;
+}
+
+/* 테이블 설정방법 */
+table {
+  border-collapse: collapse;
+  width: 60%;
+  text-align: center;
+}
+th, td {
+  border: 1px solid black;
+  border-spacing: 5px;
+}
