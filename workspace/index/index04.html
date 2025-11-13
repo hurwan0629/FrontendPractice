@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../css/style04.css">
+  <title>Document</title>
+</head>
+<body>
+  <!-- 
+  세로로 스크롤되는 캐릭터 설명 3개 넣어놓고
+  이미지 클릭하면 그 캐릭터 스토리 사이트로 갈수있게하기
+  최상단에 검색기능 놓고 검색하면 캐릭터 설명으로 바로 갈수있게 만들기
+  -->
+  <!-- 캐릭터 검색창 -->
+   <div id="body">
+      <form id="character-search">
+        <input id="search-bar" type="text" placeholder="캐릭터를 검색하세요">
+        <input id="submit-button" type="submit" value="제출">
+      </form>
+
+      <h1 id="title">챔피언을 소개합니다</h1>
+
+      <div class="introduct-character" id="introduce-sett"> 
+        <div class="champion-title">
+          <span class="name">세트</span><br>
+          <span class="alias">우두머리</span>
+        </div>
+        <a alt="sett-link-site" href="https://www.leagueoflegends.com/ko-kr/champions/sett/">
+          <img class="champion-image" alt="sett-image" src="../images/sett.jpg">
+        </a>
+        
+        <div class="champion-info">
+          점점 세력을 더해 가는 아이오니아 범죄 세계의 우두머리 세트는 녹서스와의 전쟁이 끝남과 동시에 두각을 드러내기 시작했다. 나보리 투기장의 신인 투사로 등장한 그는 무지막지한 힘과 상상을 초월하는 맷집으로 금세 유명인사가 되었고, 동네 싸움꾼에서 한때 그가 싸웠던 투기장을 지배하는 정상의 자리까지 올라섰다.
+        </div>
+      </div>
+      <div class="introduct-character" id="introduce-gwen">
+        <div class="champion-title">
+          <span class="name">그웬</span><br>
+          <span class="alias">신성한 제봉사</span>
+        </div>
+        <a alt="link-gwen-site" href="https://www.leagueoflegends.com/ko-kr/champions/gwen/">
+          <img class="champion-image" alt="gwen-image" src="../images/gwen.jpg">
+        </a>
+        
+        <div class="champion-info">
+          마법의 힘으로 살아나 인간이 된 인형 그웬은 한때 자신을 만들었던 도구를 휘두른다. 발걸음을 내디딜 때마다 자신을 만든 창조자의 사랑을 느끼며 모든 것을 감사히 여긴다. 그웬이 부리는 신성한 안개는 그웬의 가위와 바늘, 실에 축복을 내린 고대의 보호 마법이다. 모든 게 새로운 것으로 가득하지만, 그웬은 망가진 세상에서 살아남은 선한 이들을 위해 기꺼이 싸우러 나선다.
+
+        </div>
+      </div>
+      <div class="introduct-character" id="introduce-kindred">
+        <div class="champion-title">
+          <span class="name">킨드레드</span><br>
+          <span class="alias">영겁의 사냥꾼</span>
+        </div>
+        <a alt="link-kindred-site" href="https://www.leagueoflegends.com/ko-kr/champions/kindred/">
+          <img class="champion-image" alt="kindred-image" src="../images/kindred.jpg">
+        </a>
+        <div class="champion-info">
+          킨드레드는 따로지만 언제나 함께인 죽음의 양면을 지닌 존재다. 운명을 받아들인 자에게는 양의 화살로 빠른 죽음을 선사하고, 운명을 거부하고 도망치는 자에게는 늑대가 달려드는 잔혹한 최후를 안겨준다. 룬테라에서는 지역마다 킨드레드의 본성에 다른 의미를 부여했지만, 필멸의 존재라면 결국 진정한 죽음을 선택해야만 한다는 점은 같았다.
+
+        </div>
+      </div>
+      
+   </div>
+  <script src="../js/script04.js"></script>
+</body>
+</html>

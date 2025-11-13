@@ -1,0 +1,57 @@
+body {
+  display:flex;
+  flex-direction: column;
+  /* align-items: center; */
+  text-align: center;
+  background-color: #24263a;
+}
+
+#title{
+  color:rgb(148, 116, 37)
+}
+#submit-button:hover {
+  cursor:pointer;
+}
+
+.champion-info{
+  height:200px;
+  width: 80%;
+  text-align: center;
+  color:white;
+}
+
+.introduct-character{
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+  margin:30px;
+}
+
+.champion-title{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width:100%;
+  padding: 20px 10px;
+  border-radius: 10px;
+  background: #1a1a1a;
+  color:rgba(255, 255, 255, 0.575);
+}
+
+.champion-image {
+  width:90%;
+  margin:5px;
+  margin-top:10px;
+}
+.name {
+  font-size: 40px;
+  font-weight: bold;
+  margin:0px;
+}
+.alias {
+  font-size:20px;
+  font-weight: 700;
+  font-style:italic;
+  margin:4px 0 0;
+  color: #d5d693;
+}
