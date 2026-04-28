@@ -168,3 +168,94 @@ npx tsc --noEmit -p .
 
 TypeScript 기초 루트와 종합 과제는 끝났고, 다음 세션부터는 `Next App Router + 서버/클라이언트 컴포넌트 + fetch 기반 posts 미니 프로젝트`로 바로 넘어가면 된다.
 
+---
+
+## 13. 다음 세션 기준 최신 진행 상태
+
+이 아래는 이후 세션에서 가장 먼저 참고해야 하는 최신 상태다.
+
+### 완료한 Next 실습
+
+사용자는 `posts` 미니 프로젝트를 통해 아래를 이미 직접 해봤다.
+
+1. `app/posts/page.tsx` 목록 페이지 생성
+2. `app/posts/[id]/page.tsx` 상세 페이지 생성
+3. `Post` 타입 정의 후 `lib/types.ts`로 분리
+4. 서버 컴포넌트에서 `fetch` 사용
+5. `next/link`로 목록 -> 상세 이동
+6. 동적 라우트 `params`로 `id` 읽기
+7. `lib/posts.ts`로 `getPosts`, `getPost` 분리
+8. `app/posts/loading.tsx` 적용
+9. `app/posts/error.tsx` 적용
+10. `notFound()` 처리
+11. `app/posts/not-found.tsx` 적용
+12. 작은 Client Component 분리 체험
+
+### 사용자가 현재 이해한 것
+
+- App Router에서는 `app/` 아래 페이지가 기본적으로 Server Component라는 점
+- `"use client"`를 붙이면 Client Component가 된다는 점
+- `useState`, `onClick`, `useEffect`, 브라우저 API가 필요하면 Client 쪽으로 가야 한다는 점
+- Server Component는 서버에서 먼저 렌더링되고, Client Component는 hydration 이후 브라우저에서 동작한다는 큰 흐름
+- `fetch`, `revalidate`, `force-cache`, `no-store`의 대략적인 역할 차이
+
+### 아직 얕게만 이해한 것
+
+아래는 용어 감각은 조금 생겼지만, 아직 실습으로 충분히 굳히지 않았다.
+
+- server -> client props 전달 규칙
+- SSR / SSG / ISR / CSR를 현재 코드에 정확히 매핑하기
+- Client Component에서의 fetch 패턴
+- Next에서 axios를 어디에 쓰는지
+
+## 14. 다음 세션 권장 시작점
+
+다음 세션에서 사용자가 `"저번에 하던 거 계속"`이라고 하면, 아래 순서로 진행하는 것이 좋다.
+
+1. `server -> client props`부터 시작
+2. 그 다음 `SSR / SSG / ISR / CSR`를 지금 만든 `posts` 코드 기준으로 연결 설명
+3. 그 다음 Client Component에서의 fetch 패턴
+4. 그 다음 `Context`
+5. 그 다음 `Zustand`
+6. 그 다음 `Redux`
+7. 마지막으로 `memo`, `useMemo`, `useCallback`, 리렌더링 최적화
+
+## 15. 앞으로의 할 일 목록
+
+### 1차 우선순위
+
+1. Server Component가 Client Component에 어떤 props를 넘길 수 있는지 실습
+2. 함수나 이벤트 핸들러를 왜 그냥 props로 못 넘기는지 확인
+3. `posts` 예제를 기준으로 SSR / SSG / ISR / CSR 정리
+4. Client Component에서 `useEffect` 기반 fetch 실습
+5. 서버 fetch와 클라이언트 fetch 차이 정리
+6. axios를 서버/클라이언트 각각 어디에 쓰는지 보기
+
+### 2차 우선순위
+
+1. `Context`로 전역에 가까운 값 공유
+2. `Zustand`로 간단한 전역 상태관리
+3. `Redux`로 더 전통적인 상태 흐름 익히기
+4. `props`, `Context`, `Zustand`, `Redux`를 언제 쓰는지 비교
+
+### 3차 우선순위
+
+1. `React.memo`
+2. `useMemo`
+3. `useCallback`
+4. 부모/자식 리렌더링 관계 이해
+5. 최적화는 언제 필요한지 판단하는 기준 익히기
+
+## 16. 다음 세션에서의 톤과 방식
+
+- 설명은 한국어로 짧고 명확하게
+- 추상 이론보다 현재 코드에 바로 연결해서 설명
+- `"개념 -> 아주 작은 실습 -> 확인 -> 다음 개념"` 흐름 유지
+- 스타일링(Tailwind 등)은 당장은 우선순위가 아님
+- 사용자는 `렌더링 방식`, `Server/Client Component`, `캐시`, `상태관리`를 구조적으로 이해하고 싶어 함
+
+## 17. 다음 세션 시작용 한 줄 프롬프트
+
+다음에 사용자가 `이어서 하자`, `저번에 하던 거 하자`, `다음 할 일 알려줘`라고 하면:
+
+`posts 실습은 일단 한 바퀴 끝난 상태로 보고, server -> client props부터 이어가면 된다.`
